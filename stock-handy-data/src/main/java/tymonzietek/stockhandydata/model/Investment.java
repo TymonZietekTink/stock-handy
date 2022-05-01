@@ -2,7 +2,7 @@ package tymonzietek.stockhandydata.model;
 
 import java.math.BigDecimal;
 import java.util.List;
-import tymonzietek.stockhandy.model.enums.Status;
+import tymonzietek.stockhandydata.model.enums.Status;
 
 public class Investment {
   private float id;

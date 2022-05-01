@@ -2,8 +2,8 @@ package tymonzietek.stockhandydata.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import tymonzietek.stockhandy.model.enums.Currency;
-import tymonzietek.stockhandy.model.enums.OperationType;
+import java.util.Currency;
+import tymonzietek.stockhandydata.model.enums.OperationType;
 
 public class Transaction {
   private float id;
