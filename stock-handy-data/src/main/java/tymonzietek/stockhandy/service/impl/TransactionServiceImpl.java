@@ -1,6 +1,7 @@
 package tymonzietek.stockhandy.service.impl;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import org.springframework.stereotype.Service;
 import tymonzietek.stockhandy.model.BaseEntity;
@@ -23,10 +24,6 @@ public class TransactionServiceImpl implements TransactionService {
   public Set<Transaction> findAll() {
     Set<Transaction> set = new HashSet<>();
     transactionRepository.findAll().forEach(set::add);
-
-    Set<BaseEntity> baseEntities = new HashSet<>();
-    Set<Investment> investments = new HashSet<>();
-    baseEntities.addAll(investments);
     return set;
   }
 
@@ -48,5 +45,10 @@ public class TransactionServiceImpl implements TransactionService {
   @Override
   public void deleteById(Long aLong) {
     transactionRepository.deleteById(aLong);
+  }
+
+  @Override
+  public Set<Transaction> findTransactionByInvestment(Investment investment) {
+    return transactionRepository.findTransactionsByInvestment(investment);
   }
 }
