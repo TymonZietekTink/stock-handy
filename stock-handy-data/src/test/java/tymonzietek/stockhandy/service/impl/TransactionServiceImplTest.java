@@ -81,16 +81,4 @@ class TransactionServiceImplTest {
     //then
     verify(transactionRepository).delete(transaction);
   }
-
-  @Test
-  void findTransactionByInvestment() {
-    //given
-    Investment investment = mock(Investment.class);
-
-    //when
-    transactionService.findTransactionByInvestment(investment);
-
-    //then
-    verify(transactionRepository).findTransactionsByInvestment(investment);
-  }
 }

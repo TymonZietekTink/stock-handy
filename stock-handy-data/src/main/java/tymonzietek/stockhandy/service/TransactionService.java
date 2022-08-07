@@ -5,5 +5,4 @@ import tymonzietek.stockhandy.model.Investment;
 import tymonzietek.stockhandy.model.Transaction;
 
 public interface TransactionService extends CrudService<Transaction, Long> {
-  Set<Transaction> findTransactionByInvestment(Investment investment);
 }

@@ -46,9 +46,4 @@ public class TransactionServiceImpl implements TransactionService {
   public void deleteById(Long aLong) {
     transactionRepository.deleteById(aLong);
   }
-
-  @Override
-  public Set<Transaction> findTransactionByInvestment(Investment investment) {
-    return transactionRepository.findTransactionsByInvestment(investment);
-  }
 }
