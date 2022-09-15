@@ -36,7 +36,6 @@ import tymonzietek.stockhandy.service.TransactionService;
 @ExtendWith(MockitoExtension.class)
 class InvestmentControllerTest {
   InvestmentService investmentService;
-  TransactionService transactionService;
   InvestmentController investmentController;
   MockMvc investmentControllerMvc;
 
@@ -45,9 +44,8 @@ class InvestmentControllerTest {
   @BeforeEach
   public void setup(){
     investmentService = mock(InvestmentService.class);
-    transactionService = mock(TransactionService.class);
     ObjectMapper objectMapper = buildObjectMapper();
-    investmentController = new InvestmentController(investmentService,transactionService,objectMapper);
+    investmentController = new InvestmentController(investmentService,objectMapper);
     investmentControllerMvc = MockMvcBuilders.standaloneSetup(investmentController).build();
   }
 
